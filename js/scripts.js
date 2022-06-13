@@ -6,6 +6,21 @@ function Destination(location, landmarks, date, notes) {
   this.notes = notes;
 }
 
+/*[
+  'Space Needle',
+  'Climate Pledge Arena', 
+  'Fremont Troll', 
+  'The Showbox'
+  ]
+*/
+
+
+function listLandmarks(landmarks) {
+  landmarks.forEach(function (element) {
+    `<li>${element}</li>`;
+  });
+};
+
 // UI Logic
 $(document).ready(function() {
   let seattle = new Destination(
@@ -59,15 +74,21 @@ $(document).ready(function() {
   $("#destination-3").prepend(washingtonDC.location);
   $("#destination-4").prepend(taipei.location);
 
-  $("#destination1-desc").append(seattle.landmarks);
-  $("#destination2-desc").text(oregon.landmarks);
-  $("#destination3-desc").text(washingtonDC.landmarks);
-  $("#destination4-desc").text(taipei.landmarks);
+  $("#destination1-desc").append(listLandmarks(seattle.landmarks));
+  // $("#destination2-desc").text(listLandmarks());
+  // $("#destination3-desc").text(listLandmarks());
+  // $("#destination4-desc").text(listLandmarks());
 
-  $("#destination1-desc").append(seattle.date);
-  $("#destination2-desc").text(oregon.date);
-  $("#destination3-desc").text(washingtonDC.date);
-  $("#destination4-desc").text(taipei.date);  
+  $("#seaDate").text(seattle.date);
+  $("#orgDate").text(oregon.date);
+  $("#washDate").text(washingtonDC.date);
+  $("#taipDate").text(taipei.date);  
+
+  $("#seaNote").text(seattle.notes);
+  $("#orgNote").text(oregon.notes);
+  $("#washNote").text(washingtonDC.notes);
+  $("#taipNote").text(taipei.notes);  
+
 
   $(".destination").click(function() {
     $(this).children().toggle();
