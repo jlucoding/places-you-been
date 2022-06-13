@@ -1,5 +1,4 @@
 // Business Logic for Destination
-
 function Destination(location, landmarks, date, notes) {
   this.location = location;
   this.landmarks = landmarks;
@@ -10,7 +9,7 @@ function Destination(location, landmarks, date, notes) {
 // UI Logic
 $(document).ready(function() {
   let seattle = new Destination(
-    "Seattle", 
+    'Seattle', 
     [
       'Space Needle',
       'Climate Pledge Arena', 
@@ -22,7 +21,7 @@ $(document).ready(function() {
   );
 
   let oregon = new Destination(
-    "Oregon", 
+    'Oregon', 
     [
       'Crater Lake',
       'Portland Japanese Garden', 
@@ -40,8 +39,39 @@ $(document).ready(function() {
       'Smithsonian Museums', 
     ], 
     'Summer, 2019', 
-    'Using an electric scooter to get around is fun and cheap.'
+    'Using an electric scooter to get around is fun and cheap.'    
   );
+
+  let taipei = new Destination(
+    "Taipei",
+    [
+      "Taipei 101",
+      "Elephant Mountain",
+      "Chiang Kai-Shek Memorial Hall",
+      "National Palace Museum",
+    ],
+    "Summer, 2015",
+    "It rains out of nowhere in the afternoon."
+  );
+
+  $("#destination-1").prepend(seattle.location);
+  $("#destination-2").prepend(oregon.location);
+  $("#destination-3").prepend(washingtonDC.location);
+  $("#destination-4").prepend(taipei.location);
+
+  $("#destination1-desc").append(seattle.landmarks);
+  $("#destination2-desc").text(oregon.landmarks);
+  $("#destination3-desc").text(washingtonDC.landmarks);
+  $("#destination4-desc").text(taipei.landmarks);
+
+  $("#destination1-desc").append(seattle.date);
+  $("#destination2-desc").text(oregon.date);
+  $("#destination3-desc").text(washingtonDC.date);
+  $("#destination4-desc").text(taipei.date);  
+
+  $(".destination").click(function() {
+    $(this).children().toggle();
+  });
 });
 
 /*

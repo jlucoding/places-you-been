@@ -35,11 +35,11 @@ _{Leave nothing to chance! You want it to be easy for potential users, employers
 Describe: Destination()
 
 Test1: Create a destination with a location
-Code: Destination('Seattle');
+Code: new Destination('Seattle');
 Expected Output: { location: 'Seattle' }
 
 Test2: Create a destination with a location, landmarks, time of year, notes
-Code: Destination('Seattle', ['Space Needle', 'Climate Pledge Arena', 'Fremont Troll', 'The Showbox'], 'April 30, 2022', '(almost) Everywhere smells like weed');
+Code: new Destination('Seattle', ['Space Needle', 'Climate Pledge Arena', 'Fremont Troll', 'The Showbox'], 'April 30, 2022', '(almost) Everywhere smells like weed');
 Expected Output: 
 { 
   location: 'Seattle',
