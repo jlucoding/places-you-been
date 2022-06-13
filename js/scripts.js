@@ -20,30 +20,28 @@ $(document).ready(function() {
     'April 30, 2022', 
     '(almost) Everywhere smells like weed'
   );
+
   let oregon = new Destination(
-    "Seattle", 
+    "Oregon", 
     [
-      'Space Needle',
-      'Climate Pledge Arena', 
-      'Fremont Troll', 
-      'The Showbox'
+      'Crater Lake',
+      'Portland Japanese Garden', 
+      'Portland Art Museum', 
     ], 
-    'April 30, 2022', 
-    '(almost) Everywhere smells like weed'
+    'June 1, 2021', 
+    'Salem is a very small town with not much in it! But they do have sick skate parks!'
   );
+  
   let washingtonDC = new Destination(
     'Washington D.C.', 
     [
       'Lincoln Memorial',
-      '', 
-      'Fremont Troll', 
-      'The Showbox'
+      'The White House', 
+      'Smithsonian Museums', 
     ], 
-    'April 30, 2022', 
-    '(almost) Everywhere smells like weed'
+    'Summer, 2019', 
+    'Using an electric scooter to get around is fun and cheap.'
   );
-
-
 });
 
 /*

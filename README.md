@@ -1,30 +1,3 @@
-
-## TDD
-``
-Describe: Destination()
-
-Test1: Create a destination with a location
-Code: Destination('Seattle');
-Expected Output: { location: 'Seattle' }
-
-Test2: Create a destination with a location, landmarks, time of year, notes
-Code: Destination('Seattle', ['Space Needle', 'Climate Pledge Arena', 'Fremont Troll', 'The Showbox'], 'April 30, 2022', '(almost) Everywhere smells like weed');
-Expected Output: 
-{ 
-  location: 'Seattle',
-  landmarks: [
-    'Space Needle', 'Climate Pledge Arena', 'Fremont Troll', 'The Showbox'
-  ],
-  date: 'April 30, 2022',
-  notes: '(almost) Everywhere smells like weed'
-}
-
-Test3: 
-Code: ;
-Expected Output: 
-
-``
-
 # Places You've Been
 
 #### By Grace Kostanich, Seung Lee
@@ -56,6 +29,28 @@ _{Leave nothing to chance! You want it to be easy for potential users, employers
 
 * _Any known issues_
 * _should go here_
+
+## TDD
+```
+Describe: Destination()
+
+Test1: Create a destination with a location
+Code: Destination('Seattle');
+Expected Output: { location: 'Seattle' }
+
+Test2: Create a destination with a location, landmarks, time of year, notes
+Code: Destination('Seattle', ['Space Needle', 'Climate Pledge Arena', 'Fremont Troll', 'The Showbox'], 'April 30, 2022', '(almost) Everywhere smells like weed');
+Expected Output: 
+{ 
+  location: 'Seattle',
+  landmarks: [
+    'Space Needle', 'Climate Pledge Arena', 'Fremont Troll', 'The Showbox'
+  ],
+  date: 'April 30, 2022',
+  notes: '(almost) Everywhere smells like weed'
+}
+
+```
 
 ## License
 
