@@ -6,28 +6,11 @@ function Destination(location, landmarks, date, notes) {
   this.notes = notes;
 }
 
-/*[
-  'Space Needle',
-  'Climate Pledge Arena', 
-  'Fremont Troll', 
-  'The Showbox'
-  ]
-
-  <li>"Space Needle"</li>
-
-  <li>"Climate Pledge Arena"</li>
-  
-  <li>"Fremont Troll"</li>
-  
-  <li>"The Showbox"</li>
-
-*/
-
 
 function listLandmarks(landmarks) {
-  let list;
+  let list = [];
   landmarks.forEach(function (element) {
-    list = `<li>${element}</li>`;
+    list.push(`<li>${element}</li>`);
   });
   return list;
 };
@@ -86,9 +69,9 @@ $(document).ready(function() {
   $("#destination-4").prepend(taipei.location);
 
   $("#destination1-desc").append(listLandmarks(seattle.landmarks));
-  // $("#destination2-desc").text(listLandmarks());
-  // $("#destination3-desc").text(listLandmarks());
-  // $("#destination4-desc").text(listLandmarks());
+  $("#destination2-desc").append(listLandmarks(oregon.landmarks));
+  $("#destination3-desc").append(listLandmarks(washingtonDC.landmarks));
+  $("#destination4-desc").append(listLandmarks(taipei.landmarks));
 
   $("#seaDate").text(seattle.date);
   $("#orgDate").text(oregon.date);
