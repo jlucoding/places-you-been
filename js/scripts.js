@@ -12,13 +12,24 @@ function Destination(location, landmarks, date, notes) {
   'Fremont Troll', 
   'The Showbox'
   ]
+
+  <li>"Space Needle"</li>
+
+  <li>"Climate Pledge Arena"</li>
+  
+  <li>"Fremont Troll"</li>
+  
+  <li>"The Showbox"</li>
+
 */
 
 
 function listLandmarks(landmarks) {
+  let list;
   landmarks.forEach(function (element) {
-    `<li>${element}</li>`;
+    list = `<li>${element}</li>`;
   });
+  return list;
 };
 
 // UI Logic
